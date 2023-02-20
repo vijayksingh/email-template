@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.container {
+  width: 1100px;
+  background-color: #FBF9F4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-banner {
+  position: absolute;
+  top: 0;
+}
+
+.email-card {
+  max-width: 500px;
+  background-color: white;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  z-index: 2;
+  margin-top: 60px;
+}
+
+.email-welcome-text {
+  font-size: 14px;
+  color: #2E3338;
+}
+
+.email-welcome-text p {
+  line-height: 20px;
+}
+
+.email-welcome-text h1 {
+  font-size: 20px;
+  color: #1100B2;
+  font-weight: 600;
+}
+
+.email-cta {
+  all: unset;
+  text-align: center;
+  height: 36px;
+  width: 222px;
+  background-color: #1600E5;
+  color: white;
+  border-radius: 27.15px;
+  padding: 8px, 24px, 8px, 24px;
+}
+
+.email-list li span {
+  display: block;
+}
+
+.email-list li span:first-child {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.email-list li span:last-child {
+  margin-bottom: 22px;
+}
+
+.email-list li::marker {
+  color: #5B4BEB;
+}
+
+.email-note {
+  color: #2E3338;
+}
+
+.email-note h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.email-note p {
+  font-size: 12px;
+  line-height: 16px;
+  font-style: italic;
+}
+
+
+.footer {
+  background-color: #FBF9F4;
+  color: #332600;
+  padding: 16px;
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.footer a {
+  color: #332600;
+  text-decoration: underline;
+}
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <img
+        src="../assets/email-banner-customer.svg"
+        alt="Background Banner"
+        class="email-banner"
+      />
+      <section class="email-card">
+        <div class="email-welcome-text">
+          <span>Hey {USER}</span>
+          <h1>Welcome to Pepper Content!</h1>
+          <p>
+            We’re here to help you every step of the way. <br />
+            Pepper Content helps you fulfill all your content requirements and
+            hit targeted goals. Organize your projects seamlessly and stay at
+            the top of things. To get started, we’ve included the best practices
+            to use Pepper Content’s platform optimally.
+          </p>
+        </div>
+        <button class="email-cta">Get Started</button>
+        <div class="email-list">
+          <ul>
+            <li>
+              <span> Tell us more about yourself! </span
+              ><span> Go to Personal Settings and optimize your profile. </span>
+            </li>
+            <li>
+              <span> Order your first content project </span
+              ><span>
+                Order anything from blogs to website content, single post design
+                to infographics, article translation to app localization.
+              </span>
+            </li>
+            <li>
+              <span> Invite your teammates </span
+              ><span>
+                Add people from your team and collaborate together.
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="email-note">
+          <h2>Team Pepper Content</h2>
+          <p>
+            We’ll be sending you some helpful messages over the coming weeks to
+            make sure you get the most out of Pepper Content.
+          </p>
+        </div>
+        <section class="footer">
+          <p>
+            This email has been sent to m.rhiel@gmail.com because there is an
+            Peppercontent account associated with this address. If you don't
+            want to receive notification email, you can opt out by clicking
+            unsubscribe or Manage Subscription. For more information about how
+            we process data, please see our Privacy Statement.
+          </p>
+        </section>
+      </section>
+    </section>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
