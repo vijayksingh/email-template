@@ -55,9 +55,8 @@
         align-items: center;
       }
 
-      .email-banner {
-        position: absolute;
-        top: 0;
+      .pepper-logo {
+        align-self: baseline;
       }
 
       .email-card {
@@ -75,32 +74,16 @@
       .email-welcome-text {
         font-size: 14px;
         color: #2e3338;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .email-welcome-text span {
-        align-self: flex-start;
-      }
-
-      .email-welcome-img {
-        width: 100%;
-        margin: auto;
-        height: 200px;
       }
 
       .email-welcome-text p {
         line-height: 20px;
-        margin-bottom: 20px;
-        font-weight: 600;
       }
 
       .email-welcome-text h1 {
         font-size: 20px;
         color: #1100b2;
         font-weight: 600;
-        margin-bottom: 0;
       }
 
       .email-cta {
@@ -112,40 +95,64 @@
         color: white;
         border-radius: 27.15px;
         padding: 8px, 24px, 8px, 24px;
-        margin: 20px
       }
 
-            
-      .email-list {
+      .assignment-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         width: 100%;
-        font-size: 14px;
       }
 
-      .email-list h2 {
+      .assignment-item {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 16px 20px;
+      }
+
+      .assignment-id {
+        color: #9da6af;
+        font-size: 12px;
+      }
+
+      .assignment-sub {
+        color: #2e3338;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .assignment-count {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 6px;
+        gap: 2px;
+        background: #b3004e;
+        border-radius: 13px;
+        width: 30px;
+        height: 24px;
+        color: white;
+      }
+
+      .email-note {
+        color: #2e3338;
+      }
+
+      .email-note h2 {
+        font-size: 14px;
         font-weight: 600;
         margin-bottom: 8px;
       }
 
-      .email-list li span {
-        display: block;
-      }
-
-      .email-list li span:last-child {
-        margin-bottom: 22px;
-      }
-
-      .email-list li::marker {
-        color: #5b4beb;
-      }
-
-      .email-info {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        font-size: 13px;
-        padding: 18px;
-        color: #2e3338;
-        background-color: #F3F3F3;
+      .email-note p {
+        font-size: 12px;
+        line-height: 16px;
+        font-style: italic;
       }
 
       .footer {
@@ -165,47 +172,43 @@
   </head>
   <body>
     <section class="container">
-      <img
-        src="../assets/email-banner-customer.svg"
-        alt="Background Banner"
-        class="email-banner"
-      />
       <section class="email-card">
-        <div class="email-welcome-text">
-          <span>Hey {USER}</span>
-          <h1>Time to celebrate!</h1>
-          <p>All of the assignments for your project "Doodoo" are done!</p>
-          <button class="email-cta">View all assignments</button>
+        <div class="pepper-logo">
           <img
-            src="/assets/celebration 1.svg"
-            alt="Celebrate"
-            class="email-welcome-img"
+            src="../../assets/pepper-logo-black.svg"
+            alt="Pepper Content Logo"
           />
         </div>
-        <div class="email-list">
-          <h2>Here’s what lies ahead of you:</h2>
+        <div class="email-welcome-text">
+          <span>Hey {USER}</span>
+          <h1>22nd December 2022</h1>
           <p>
-            Review the assignments and take the next steps -
-            </p>
-          <ul>
-            <li>
-              <span> Approve the assignment </span>
-            </li>
-            <li>
-              <span> Rework - You get up to 2 free reworks </span>
-         
-            </li>
-            <li>
-              <span> Reject </span>
-            
-            </li>
-          </ul>
+            Save the date. All the assignments of your project “Doodoo” will be
+            delivered at your doorstep. I mean, Pepper dashboard.
+          </p>
+          <p>
+            Here are the phase-wise delivery dates
+          </p>
         </div>
-        <div class="email-info">
-          <img src="/assets/star-icon.svg" alt="star" width="50px" height="50px">
-          <p>Did you like the work of the creator working on your assignments? 
-            Favorite them and build your own external dream content team.</p>
+        <div class="assignment-list">
+          <div class="assignment-item">
+            <span class="assignment-id"> #311124 </span>
+            <span class="assignment-sub">October Events Content</span>
+            <div class="assignment-count">
+              <span class="assignment-count">8</span>
+              <img src="./../../assets/fi_message-circle.svg" alt="" />
+            </div>
+          </div>
+          <div class="assignment-item">
+            <span class="assignment-id"> #311124 </span>
+            <span class="assignment-sub">October Events Content</span>
+            <div class="assignment-count">
+              <span>8</span>
+              <img src="./../../assets/fi_message-circle.svg" alt="" />
+            </div>
+          </div>
         </div>
+        <button class="email-cta">Check out the message</button>
         <section class="footer">
           <p>
             This email has been sent to m.rhiel@gmail.com because there is an

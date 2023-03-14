@@ -66,7 +66,7 @@
         padding: 40px 60px;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 24px;
         align-items: center;
         z-index: 2;
         margin-top: 60px;
@@ -75,17 +75,32 @@
       .email-welcome-text {
         font-size: 14px;
         color: #2e3338;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .email-welcome-text span {
+        align-self: flex-start;
+      }
+
+      .email-welcome-img {
         width: 100%;
+        margin: auto;
+        height: 200px;
       }
 
       .email-welcome-text p {
         line-height: 20px;
+        margin-bottom: 20px;
+        font-weight: 600;
       }
 
       .email-welcome-text h1 {
         font-size: 20px;
         color: #1100b2;
         font-weight: 600;
+        margin-bottom: 0;
       }
 
       .email-cta {
@@ -97,15 +112,21 @@
         color: white;
         border-radius: 27.15px;
         padding: 8px, 24px, 8px, 24px;
+        margin: 20px;
+      }
+
+      .email-list {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .email-list h2 {
+        font-weight: 600;
+        margin-bottom: 8px;
       }
 
       .email-list li span {
         display: block;
-      }
-
-      .email-list li span:first-child {
-        font-weight: 600;
-        font-size: 16px;
       }
 
       .email-list li span:last-child {
@@ -116,20 +137,14 @@
         color: #5b4beb;
       }
 
-      .email-note {
+      .email-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 13px;
+        padding: 18px;
         color: #2e3338;
-      }
-
-      .email-note h2 {
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 8px;
-      }
-
-      .email-note p {
-        font-size: 12px;
-        line-height: 16px;
-        font-style: italic;
+        background-color: #f3f3f3;
       }
 
       .footer {
@@ -139,10 +154,6 @@
         font-size: 11px;
         font-weight: 400;
         font-style: italic;
-      }
-
-      .footer .icons {
-        margin-top: 20px;
       }
 
       .footer a {
@@ -161,32 +172,57 @@
       <section class="email-card">
         <div class="email-welcome-text">
           <span>Hey {USER}</span>
-          <h1>Thanks for signing up</h1>
-          <p>Please verify your email address to get started</p>
-          <button class="email-cta">Verify Email Now</button>
+          <h1>Time to celebrate!</h1>
+          <p>All of the assignments for your project "Doodoo" are done!</p>
+          <button class="email-cta">View all assignments</button>
+          <img
+            src="/assets/celebration 1.svg"
+            alt="Celebrate"
+            class="email-welcome-img"
+          />
+        </div>
+        <div class="email-list">
+          <h2>Here’s what lies ahead of you:</h2>
+          <p>Review the assignments and take the next steps -</p>
+          <ul>
+            <li>
+              <span> Approve the assignment </span>
+            </li>
+            <li>
+              <span> Rework - You get up to 2 free reworks </span>
+            </li>
+            <li>
+              <span> Reject </span>
+            </li>
+          </ul>
+        </div>
+        <div class="email-info">
+          <img
+            src="/assets/star-icon.svg"
+            alt="star"
+            width="50px"
+            height="50px"
+          />
           <p>
-            Have questions or trouble logging in? <br>
-            Write to us on <a href="mailto:support@peppercontent.in">support@peppercontent.in</a>
+            Did you like the work of the creator working on your assignments?
+            <a href=""> Favorite them </a> and build your own external dream
+            content team.
           </p>
         </div>
-
         <section class="footer">
           <p>
-            This email has been sent to m.rhiel@gmail.com because there is an
-            Peppercontent account associated with this address. If you don't
-            want to receive notification email, you can opt out by clicking
-            unsubscribe or Manage Subscription.
+            This email has been sent to
+            <a href="mailto:email@example.com">m.rhiel@gmail.com</a>
+            because there is an Peppercontent account associated with this
+            address. If you don't want to receive notification email, you can
+            opt out by clicking
+            <a href=""> unsubscribe </a> or
+            <a href=""> Manage Subscription </a>.
           </p>
           <p>
             For more information about how we process data, please see our
             Privacy Statement.
           </p>
-          <div class="icons">
-            <img src="/assets/Linkedin.svg" alt="LinkedIn" />
-            <img src="/assets/Twitter.svg" alt="LinkedIn" />
-            <img src="/assets/Instagram.svg" alt="LinkedIn" />
-            <img src="/assets/Facebook.svg" alt="LinkedIn" />
-          </div>
         </section>
       </section>
     </section>
