@@ -46,7 +46,7 @@ h1 {
 }
 
 .container {
-  width: 1100px;
+  width: 100%;
   background-color: #FBF9F4;
   min-height: 100vh;
   display: flex;
@@ -56,6 +56,7 @@ h1 {
 }
 
 .email-banner {
+  width: 100%;
   position: absolute;
   top: 0;
 }
@@ -150,13 +151,13 @@ h1 {
   <body>
     <section class="container">
       <img
-        src="../assets/email-banner-customer.svg"
+        src="https://assets.peppercontent.io/email-templates/email-banner-customer.svg"
         alt="Background Banner"
         class="email-banner"
       />
       <section class="email-card">
         <div class="email-welcome-text">
-          <span>Hey {USER}</span>
+          <span>Hey {{USER}}</span>
           <h1>Welcome to Pepper Content!</h1>
           <p>
             We’re here to help you every step of the way. <br />
@@ -166,24 +167,26 @@ h1 {
             to use Pepper Content’s platform optimally.
           </p>
         </div>
-        <button class="email-cta">Get Started</button>
+         <a href="https://intercom.help/peppercontent/en/articles/6851663-getting-started-with-pepper-content" ><button class="email-cta">Get Started</button></a> 
         <div class="email-list">
           <ul>
             <li>
               <span> Tell us more about yourself! </span
-              ><span> Go to Personal Settings and optimize your profile. </span>
+              ><span> Go to <a href="https://intercom.help/peppercontent/en/articles/5542568-what-all-things-encompass-personal-details-and-why-do-i-need-to-fill-them">Personal Settings</a> and optimize your profile. </span>
             </li>
             <li>
               <span> Order your first content project </span
               ><span>
-                Order anything from blogs to website content, single post design
+                <a href="https://intercom.help/peppercontent/en/articles/5521877-what-all-categories-does-pepper-content-operate-in">
+                  Order anything
+                </a> from blogs to website content, single post design
                 to infographics, article translation to app localization.
               </span>
             </li>
             <li>
               <span> Invite your teammates </span
               ><span>
-                Add people from your team and collaborate together.
+                Add people from your team and <a href="https://intercom.help/peppercontent/en/articles/5542560-can-i-add-my-team-members-to-the-platform">collaborate </a> together.
               </span>
             </li>
           </ul>
@@ -201,11 +204,16 @@ h1 {
             Peppercontent account associated with this address. If you don't
             want to receive notification email, you can opt out by clicking
             unsubscribe or Manage Subscription. For more information about how
-            we process data, please see our Privacy Statement.
+            we process data, please see our <a href="https://www.peppercontent.io/privacy/#section-1">Privacy Statement</a>.
           </p>
+            <div class="icons">
+            <img src="https://assets.peppercontent.io/email-templates/linkedin.svg" alt="LinkedIn Social" />
+            <img src="https://assets.peppercontent.io/email-templates/twitter.svg" alt="Twitter Social" />
+            <img src="https://assets.peppercontent.io/email-templates/instagram.svg" alt="Instagram social" />
+            <img src="https://assets.peppercontent.io/email-templates/facebook.svg" alt="Facebook social" />
+          </div>
         </section>
       </section>
     </section>
-    <script type="module" src="/main.js"></script>
   </body>
 </html>

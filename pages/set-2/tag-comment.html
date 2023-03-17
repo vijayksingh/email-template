@@ -55,9 +55,8 @@
         align-items: center;
       }
 
-      .email-banner {
-        position: absolute;
-        top: 0;
+      .pepper-logo {
+        align-self: baseline;
       }
 
       .email-card {
@@ -75,6 +74,7 @@
       .email-welcome-text {
         font-size: 14px;
         color: #2e3338;
+        align-self: baseline;
       }
 
       .email-welcome-text p {
@@ -98,46 +98,35 @@
         padding: 8px, 24px, 8px, 24px;
       }
 
-      .inbox-list {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-      }
-
-      .inbox-item {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        width: 100%;
-        border: 1px solid #e9ecef;
-        border-radius: 8px;
-        padding: 16px 20px;
-      }
-
-      .inbox-id {
-        color: #9da6af;
-        font-size: 12px;
-      }
-
-      .inbox-sub {
-        color: #2e3338;
-        font-size: 14px;
-        font-weight: 600;
-      }
-
-      .inbox-count {
+      .inbox-card {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        padding: 4px 6px;
-        gap: 2px;
-        background: #b3004e;
-        border-radius: 13px;
-        width: 30px;
-        height: 24px;
-        color: white;
+        gap: 12px;
+        border: 1px solid #E9ECEF;
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      .inbox-profile-pic {
+        height: 40px;
+        width: 44px;
+        display: flex;
+        gap: 12px;
+      }
+
+      .inbox-profile-pic img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      .inbox-profile-info {
+        grid-area: profile-info;
+      }
+
+      .inbox-message {
+        grid-area: message;
       }
 
       .email-note {
@@ -174,44 +163,86 @@
   <body>
     <section class="container">
       <section class="email-card">
+        <div class="pepper-logo">
+          <img
+            src="../../assets/pepper-logo-black.svg"
+            alt="Pepper Content Logo"
+          />
+        </div>
         <div class="email-welcome-text">
           <span>Hey {USER}</span>
-          <h1>You have unread messages</h1>
+          <h1>You have an unread notification</h1>
           <p>
-            You have 2 unread messages on Pepper Chat, Project Doodoo. Your team
-            members are stuck somewhere and need your expertise.
+            It seems your team members are stuck somewhere and need your help
           </p>
         </div>
-        <div class="inbox-list">
-          <div class="inbox-item">
-            <span class="inbox-id"> #311124 </span>
-            <span class="inbox-sub">October Events Content</span>
-            <div class="inbox-count">
-              <span class="inbox-count">8</span>
-              <img src="./../../assets/fi_message-circle.svg" alt="" />
-            </div>
+        <div class="inbox-card">
+          <div class="inbox-profile-pic">
+            <img src="/assets/marketing-1.png" alt="Profile Pic" />
           </div>
-          <div class="inbox-item">
-            <span class="inbox-id"> #311124 </span>
-            <span class="inbox-sub">October Events Content</span>
-            <div class="inbox-count">
-              <span>8</span>
-              <img src="./../../assets/fi_message-circle.svg" alt="" />
+          <div class="inbox-msg-layout">
+            <div class="inbox-profile-info">
+              <strong>Rani Mirza</strong>
+              <span>18 hours ago</span>
+            </div>
+            <div class="inbox-message">
+              <span
+                >Hi @Sonal Kaur! I will be sharing the draft by the end of the
+                day.
+              </span>
             </div>
           </div>
         </div>
-        <button class="email-cta">Check out the message</button>
+        <p>Sneha Iyer commented in Christmas Campaign ‘22</p>
+        <button class="email-cta">Respond Now</button>
         <section class="footer">
           <p>
-            This email has been sent to m.rhiel@gmail.com because there is an
+            This email has been sent to {{email}} because there is an
             Peppercontent account associated with this address. If you don't
             want to receive notification email, you can opt out by clicking
-            unsubscribe or Manage Subscription. For more information about how
-            we process data, please see our Privacy Statement.
+            unsubscribe or Manage Subscription.
           </p>
+          <p>
+            For more information about how we process data, please see our
+            <a href="https://www.peppercontent.io/privacy/#section-1"
+              >Privacy Statement</a
+            >.
+          </p>
+          <div class="icons">
+            <a
+              href="https://www.linkedin.com/company/peppercontent/"
+              style="text-decoration: none"
+            >
+              <img
+                src="https://assets.peppercontent.io/email-templates/linkedin.svg"
+                alt="LinkedIn Social"
+              />
+            </a>
+            <img
+              src="https://assets.peppercontent.io/email-templates/twitter.svg"
+              alt="Twitter Social"
+            />
+            <a
+              href="https://www.instagram.com/pepper_content/"
+              style="text-decoration: none"
+            >
+              <img
+                src="https://assets.peppercontent.io/email-templates/instagram.svg"
+                alt="Instagram social"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/Pepper-Co-322356101506651/"
+              style="text-decoration: none"
+            >
+              <img
+                src="https://assets.peppercontent.io/email-templates/facebook.svg"
+                alt="Facebook social"
+              />
+            </a>
+          </div>
         </section>
       </section>
     </section>
-    <script type="module" src="/main.js"></script>
   </body>
 </html>

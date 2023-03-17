@@ -155,16 +155,16 @@
   <body>
     <section class="container">
       <img
-        src="../assets/email-banner-customer.svg"
+        src="https://assets.peppercontent.io/email-templates/email-banner-customer.svg"
         alt="Background Banner"
         class="email-banner"
       />
       <section class="email-card">
         <div class="email-welcome-text">
           <span>Hey {USER}</span>
-          <h1>Your project {“Doodoo”} is live!</h1>
+          <h1>Your project {{project_name}} is live!</h1>
           <img
-            src="/assets/celebration 1.svg"
+            src="https://assets.peppercontent.io/email-templates/celebration-1.svg"
             alt="Celebrate"
             class="email-welcome-img"
           />
@@ -178,15 +178,20 @@
           <h2>Here are the next steps:</h2>
           <ul>
             <li>
-              <span> Tell us more about yourself! </span>
+              <span>
+                Keep an eye on the Pepper
+                <a href="your Pepper account">dashboard</a> to know how far
+                along we are
+              </span>
             </li>
             <li>
-              <span> Order your first content project </span>
-         
-            </li>
-            <li>
-              <span> Invite your teammates </span>
-            
+              <span>
+                Explore your
+                <a
+                  href="https://intercom.help/peppercontent/en/articles/6364362-locate-items-across-all-projects-easily"
+                  >dashboard</a
+                >
+              </span>
             </li>
           </ul>
         </div>
@@ -195,12 +200,32 @@
             This email has been sent to m.rhiel@gmail.com because there is an
             Peppercontent account associated with this address. If you don't
             want to receive notification email, you can opt out by clicking
-            unsubscribe or Manage Subscription. For more information about how
-            we process data, please see our Privacy Statement.
+            unsubscribe or Manage Subscription.
           </p>
+          <p>
+            For more information about how we process data, please see our
+            Privacy Statement.
+          </p>
+          <div class="icons">
+            <img
+              src="https://assets.peppercontent.io/email-templates/linkedin.svg"
+              alt="LinkedIn Social"
+            />
+            <img
+              src="https://assets.peppercontent.io/email-templates/twitter.svg"
+              alt="Twitter Social"
+            />
+            <img
+              src="https://assets.peppercontent.io/email-templates/instagram.svg"
+              alt="Instagram social"
+            />
+            <img
+              src="https://assets.peppercontent.io/email-templates/facebook.svg"
+              alt="Facebook social"
+            />
+          </div>
         </section>
       </section>
     </section>
-    <script type="module" src="/main.js"></script>
   </body>
 </html>
